@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enigma Machine Simulator</title>
+    <title>恩尼格瑪密碼模擬機</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,17 +50,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Enigma Machine Simulator</h1>
+        <h1>恩尼格瑪密碼模擬機</h1>
         <div class="machine">
             <div class="input-section">
-                <textarea id="input-text" placeholder="Enter text to encrypt/decrypt..."></textarea>
-                <button onclick="processText()">Process</button>
+                <textarea id="input-text" placeholder="在此輸入要加密/解密的文字:"></textarea>
+                <button onclick="processText()">開始加密</button>
             </div>
             <div class="output-section">
-                <textarea id="output-text" placeholder="Output will appear here..." readonly></textarea>
+                <textarea id="output-text" placeholder="輸出結果為:" readonly></textarea>
             </div>
             <div class="log-section">
-                <h2>Processing Log</h2>
+                <h2>加密過程</h2>
                 <div id="log" class="log"></div>
             </div>
         </div>
@@ -69,9 +69,9 @@
         class Enigma {
             constructor() {
                 this.rotors = [
-                    "EKMFLGDQVZNTOWYHXUSPAIBRCJ",  // Rotor I
-                    "AJDKSIRUXBLHWTMCQGZNPYFVOE",  // Rotor II
-                    "BDFHJLCPRTXVZNYEIWGAKMUSQO"   // Rotor III
+                    "EKMFLGDQVZNTOWYHXUSPAIBRCJ",  
+                    "AJDKSIRUXBLHWTMCQGZNPYFVOE",  
+                    "BDFHJLCPRTXVZNYEIWGAKMUSQO"   
                 ];
                 this.reflector = "YRUHQSLDPXNGOKMIEBFZCWVJAT";
                 this.rotorPositions = [0, 0, 0];
